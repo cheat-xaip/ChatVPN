@@ -1,29 +1,29 @@
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    background-color: #000;
-    color: #fff;
+    background-color: #fff;
+    color: #333;
     text-align: center;
     overflow-x: hidden;
 }
 
 header {
     padding: 50px 20px;
-    background: linear-gradient(135deg, #222, #000);
+    background: linear-gradient(135deg, #444, #222);
     animation: fadeIn 2s ease-in-out;
 }
 
 header h1 {
     margin: 0;
     font-size: 3em;
-    color: #1abc9c;
+    color: #fff;
     animation: slideInDown 1s ease-in-out;
 }
 
 header p {
     margin: 10px 0 0;
     font-size: 1.2em;
-    color: #ecf0f1;
+    color: #ccc;
     animation: slideInUp 1s ease-in-out;
 }
 
@@ -31,37 +31,19 @@ section {
     padding: 50px 20px;
 }
 
-#features {
-    background-color: #111;
-    border-top: 2px solid #1abc9c;
+#files {
+    background-color: #f9f9f9;
+    border-top: 2px solid #444;
     animation: fadeIn 2s ease-in-out;
 }
 
-#features ul {
+#files ul {
     list-style-type: none;
     padding: 0;
 }
 
-#features li {
-    margin: 10px 0;
-    font-size: 1.2em;
-    border-bottom: 1px solid #333;
-    padding-bottom: 10px;
-    animation: slideInLeft 1s ease-in-out;
-}
-
-#download {
-    background-color: #000;
-    animation: fadeIn 2s ease-in-out;
-}
-
-#download ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-#download li {
-    margin: 10px 0;
+#files li {
+    margin: 20px 0;
     font-size: 1.2em;
     animation: slideInRight 1s ease-in-out;
 }
@@ -69,30 +51,30 @@ section {
 .download-button {
     color: #fff;
     text-decoration: none;
-    border: 2px solid #1abc9c;
+    border: 2px solid #444;
     padding: 10px 20px;
     border-radius: 5px;
-    background-color: #1abc9c;
+    background-color: #444;
     transition: background-color 0.3s, border-color 0.3s, transform 0.3s;
 }
 
 .download-button:hover {
-    background-color: #16a085;
-    border-color: #16a085;
+    background-color: #666;
+    border-color: #666;
     transform: scale(1.1);
 }
 
 footer {
     padding: 20px;
-    background-color: #111;
-    border-top: 2px solid #1abc9c;
+    background-color: #222;
+    border-top: 2px solid #444;
     animation: fadeIn 2s ease-in-out;
 }
 
 footer p {
     margin: 0;
     font-size: 0.8em;
-    color: #bdc3c7;
+    color: #ccc;
 }
 
 @keyframes fadeIn {
@@ -119,15 +101,6 @@ footer p {
     }
     to {
         transform: translateY(0);
-    }
-}
-
-@keyframes slideInLeft {
-    from {
-        transform: translateX(-100%);
-    }
-    to {
-        transform: translateX(0);
     }
 }
 
