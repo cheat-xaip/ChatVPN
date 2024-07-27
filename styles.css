@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+
+header {
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #222, #000);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+}
+
+header p {
+    margin: 10px 0 0;
+    font-size: 1.2em;
+}
+
+section {
+    padding: 50px 20px;
+}
+
+#features {
+    background-color: #111;
+}
+
+#features ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#features li {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+#download ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#download li {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+#download a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid #fff;
+}
+
+footer {
+    padding: 20px;
+    background-color: #111;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.8em;
+}
