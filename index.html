@@ -1,35 +1,20 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChatVPN - Бесплатный VPN Сервис</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>File Sharing Website</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>ChatVPN</h1>
-        <p>Ваш бесплатный VPN сервис</p>
-    </header>
-    <section id="features">
-        <h2>Функции</h2>
-        <ul>
-            <li>Безопасный и анонимный серфинг</li>
-            <li>Бесплатный и неограниченный доступ</li>
-            <li>Простота использования</li>
-        </ul>
-    </section>
-    <section id="download">
-        <h2>Скачать</h2>
-        <p>Скачайте ChatVPN для вашего устройства:</p>
-        <ul>
-            <li><a href="https://goo.su/nLRyX" class="download-button">Скачать VPN</a></li>
-        </ul>
-    </section>
-    <footer>
-        <p>&copy; 2024 ChatVPN. Все права защищены.</p>
-    </footer>
-    <script src="scripts.js"></script>
+    <h1>File Sharing Website</h1>
+    <div id="upload-container">
+        <h2>Upload File</h2>
+        <input type="file" id="file-input">
+        <button id="upload-button">Upload</button>
+    </div>
+    <div id="download-container">
+        <h2>Available Files</h2>
+        <ul id="file-list"></ul>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
