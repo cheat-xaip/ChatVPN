@@ -1,20 +1,199 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-    <title>File Sharing Website</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatVPN - Бесплатный VPN Сервис</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0A0A0A;
+            color: #FFFFFF;
+            overflow: hidden;
+        }
+        
+        header {
+            text-align: center;
+            padding: 50px 0;
+            background-color: #1A1A1A;
+            overflow: hidden;
+        }
+        
+        header .title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3em;
+            color: #00ADEF;
+            margin: 0;
+            animation: moveTitle 5s infinite alternate;
+        }
+
+        header .title span {
+            display: inline-block;
+            margin: 0 10px;
+            animation: float 2s infinite ease-in-out;
+        }
+
+        @keyframes moveTitle {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(30px); }
+            100% { transform: translateX(0); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        header .free-tag {
+            font-size: 1.5em;
+            color: #00ADEF; /* основной цвет темы */
+            margin-top: 10px;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.2); opacity: 0.7; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        header p {
+            font-size: 1.2em;
+            color: #CCCCCC;
+            animation: fadeIn 3s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .description {
+            max-width: 800px;
+            margin: 50px auto;
+            text-align: center;
+            padding: 0 20px;
+            animation: slideIn 3s ease-in-out;
+        }
+        
+        @keyframes slideIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .description h2 {
+            color: #00ADEF;
+            font-size: 2em;
+            animation: fadeInText 3s ease-in-out;
+        }
+        
+        .description p {
+            line-height: 1.6em;
+            color: #CCCCCC;
+            font-size: 1.2em;
+            animation: fadeInText 3s ease-in-out;
+        }
+
+        @keyframes fadeInText {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .ball {
+            position: absolute;
+            border-radius: 50%;
+            background-color: #00ADEF;
+            width: 10px;
+            height: 10px;
+            animation: moveBall 5s infinite linear;
+        }
+        
+        @keyframes moveBall {
+            0% { transform: translate(0, 0); }
+            25% { transform: translate(80vw, 0); }
+            50% { transform: translate(80vw, 80vh); }
+            75% { transform: translate(0, 80vh); }
+            100% { transform: translate(0, 0); }
+        }
+
+        .download-button {
+            display: inline-block;
+            padding: 15px 30px;
+            margin-top: 30px;
+            font-size: 1.2em;
+            color: #FFFFFF;
+            background-color: #00ADEF;
+            text-decoration: none;
+            border-radius: 5px;
+            animation: blinkText 1.5s infinite;
+        }
+
+        @keyframes blinkText {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .download-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .discord-logo {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            color: #CCCCCC;
+            font-size: 0.9em;
+        }
+
+    </style>
 </head>
 <body>
-    <h1>File Sharing Website</h1>
-    <div id="upload-container">
-        <h2>Upload File</h2>
-        <input type="file" id="file-input">
-        <button id="upload-button">Upload</button>
+    <header>
+        <div class="title">
+            <span>C</span><span>h</span><span>a</span><span>t</span><span>V</span><span>P</span><span>N</span>
+        </div>
+        <div class="free-tag">БЕСПЛАТНЫЙ VPN</div>
+        <p>Безопасный, Быстрый и Бесплатный VPN Сервис</p>
+    </header>
+    <div class="description">
+        <h2>О ChatVPN</h2>
+        <p>ChatVPN предоставляет вам первоклассную безопасность и конфиденциальность, гарантируя анонимность ваших онлайн-действий. Наш VPN сервис абсолютно бесплатен, без скрытых плат и подписок. Наслаждайтесь неограниченным доступом к интернету с быстрыми и надежными соединениями. Независимо от того, пользуетесь ли вы интернетом дома или в общественных местах, ChatVPN защищает вас. Присоединяйтесь к нам сегодня и ощутите интернет без границ!</p>
     </div>
-    <div id="download-container">
-        <h2>Available Files</h2>
-        <ul id="file-list"></ul>
+    <div class="download-container">
+        <a href="https://goo.su/ZUvm6E" class="download-button">Скачать</a>
     </div>
-    <script src="script.js"></script>
+    <a href="https://discord.gg/MEM2ZHmj" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png" alt="Discord" class="discord-logo">
+    </a>
+    <div class="footer">
+        © ChatVPN 2024. Все права защищены.
+    </div>
+    <script>
+        // Создаем движущиеся шарики
+        for (let i = 0; i < 20; i++) {
+            const ball = document.createElement('div');
+            ball.className = 'ball';
+            ball.style.top = `${Math.random() * 100}vh`;
+            ball.style.left = `${Math.random() * 100}vw`;
+            ball.style.animationDelay = `${Math.random() * 5}s`;
+            document.body.appendChild(ball);
+        }
+    </script>
 </body>
 </html>
