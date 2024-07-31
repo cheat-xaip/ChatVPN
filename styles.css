@@ -1,17 +1,1 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-}
 
-#upload-container, #download-container {
-    margin-bottom: 20px;
-}
-
-#file-list {
-    list-style-type: none;
-    padding: 0;
-}
-
-#file-list li {
-    margin-bottom: 5px;
-}
